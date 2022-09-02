@@ -14,6 +14,13 @@ document.getElementById('open').addEventListener('click', () => {
 				file: 'scripts/disable-ctrl_r.js',
 			});
 		}
+		const disableCtrlAllKeyInput = document.getElementById('disable-ctrl_all').checked;
+		if (disableCtrlAllKeyInput) {
+			chrome.tabs.executeScript(tab.id, {
+				allFrames: true,
+				file: 'scripts/disable-ctrl_all.js',
+			});
+		}
 		const disableAllKeyInput = document.getElementById('disable-all').checked;
 		if (disableAllKeyInput) {
 			chrome.tabs.executeScript(tab.id, {
