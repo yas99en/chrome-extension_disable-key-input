@@ -31,7 +31,7 @@ document.getElementById('open').addEventListener('click', () => {
 		chrome.windows.create({
 			tabId: tab.id,
 			type: chrome.windows.CreateType.POPUP,
-			state: chrome.windows.WindowState.MAXIMIZED,
+//			state: chrome.windows.WindowState.MAXIMIZED,
 		});
 	});
 });
